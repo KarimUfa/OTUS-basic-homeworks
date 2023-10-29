@@ -1,0 +1,81 @@
+package ru.idrisov.homeworks.homework5;
+
+import java.util.Arrays;
+
+public class Doma5 {
+    public static void main(String[] args) {
+
+        int[] arr = {3, 7, 9, 10, 20, 30};
+
+        metod1(5, "Java");
+        metod2(arr);
+        metod3(10);
+        metod4(15);
+        metod5(arr);
+
+
+    }
+
+    //1 задача
+    public static void metod1(int a, String b) {
+        for (int i = 0; i < a; i++) {
+            System.out.println(b);
+        }
+    }
+
+    //2 задача
+    public static void metod2(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 5) {
+                sum += arr[i];
+            }
+        }
+        System.out.println(sum);
+    }
+
+    //3 задача
+    public static void metod3(int x) {
+        int[] array = new int[x];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i;
+        }
+        System.out.println(Arrays.toString(array));
+    }
+
+    //4 задача
+    public static void metod4(int y) {
+        int[] array = new int[y];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i + y;
+        }
+        System.out.println(Arrays.toString(array));
+    }
+
+    //5 задача
+    public static void metod5(int[] arr) {
+
+        int summ1 = 0;
+        int summ2 = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] % 2 == 0) {
+                summ1 += arr[i];
+            } else {
+                summ2 += arr[i];
+            }
+        }
+
+        if (summ1 > summ2) {
+            System.out.println("Сумма элементов summ1 больше чем summ2");
+        } else {
+            System.out.println("Сумма элементов summ2 больше чем summ1");
+        }
+
+    }
+}
+
+
+
+
