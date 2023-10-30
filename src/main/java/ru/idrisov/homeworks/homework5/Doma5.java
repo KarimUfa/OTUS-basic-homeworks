@@ -59,18 +59,17 @@ public class Doma5 {
         int summ2 = 0;
 
         for (int i = 0; i < arr.length; i++) {
-
-            if (arr[i] % 2 == 0) {
+            if (i < arr.length / 2) {
                 summ1 += arr[i];
             } else {
                 summ2 += arr[i];
             }
         }
 
-        if (summ1 > summ2) {
-            System.out.println("Сумма элементов summ1 больше чем summ2");
+        if (summ1 > summ2){
+            System.out.println("Сумма summ1 больше чем summ2");
         } else {
-            System.out.println("Сумма элементов summ2 больше чем summ1");
+            System.out.println("Сумма summ2 больше чем summ1");
         }
 
     }
