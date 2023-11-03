@@ -16,8 +16,9 @@ public class Doma77 {
         int[][] size = new int[SIZE_X][SIZE_Y];
         metod2(size);
 
-        char[][] arrays = new char[20][20];
+        int[][] arrays = {{8, 10, 15}, {17, 22, 18}, {8, 10, 22}};
         metod3(arrays);
+        metod3d(arrays);
 
         int[][] array = {{-5, -7, -10}, {-10, -15, -20, -9}};
 
@@ -58,32 +59,35 @@ public class Doma77 {
     }
 
     // 3 задание
-    public static void metod3(char[][] arrays) {
-        System.out.print("================");
-        System.out.println();
-
-        for (int x = 0; x < arrays.length; x++) {
-            for (int y = 0; y < arrays[x].length; y++) {
-                if (x == y || x + y == arrays.length - 1) {
-                    arrays[x][y] = '0';
-                } else {
-                    arrays[x][y] = '*';
+    public static void metod3(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (i == j || i + j == array.length - 1) {
+                    array[i][j] = 0;
                 }
-                System.out.print(arrays[x][y]);
             }
-            System.out.println();
-
         }
     }
 
-    // 4 задание
-    public static int findMax(int[][] array) {
-        int max = array[0][0];
-
+    public static void metod3d(int[][] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                if (array[i][j] > max) {
-                    max = array[i][j];
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+
+    // 4 задание
+    public static int findMax(int[][] arr) {
+        int max = arr[0][0];
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
                 }
             }
         }
