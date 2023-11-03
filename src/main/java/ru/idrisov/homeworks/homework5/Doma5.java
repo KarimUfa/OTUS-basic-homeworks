@@ -4,13 +4,12 @@ import java.util.Arrays;
 
 public class Doma5 {
     public static void main(String[] args) {
-
         int[] arr = {3, 7, 9, 10, 20, 30};
 
         metod1(5, "Java");
         metod2(arr);
-        metod3(10, new int[]{2,4,1,6,7});
-        metod4(15, new int [] {5,10,15,20});
+        metod3(10, new int[]{2,4,1,6,7}); // переделано
+        metod4(15, new int [] {5,10,15,20}); // переделано
         metod5(arr);
 
 
