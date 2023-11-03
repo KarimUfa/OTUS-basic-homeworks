@@ -9,8 +9,8 @@ public class Doma5 {
 
         metod1(5, "Java");
         metod2(arr);
-        metod3(10);
-        metod4(15);
+        metod3(10, new int[]{2,4,1,6,7});
+        metod4(15, new int [] {5,10,15,20});
         metod5(arr);
 
 
@@ -35,19 +35,17 @@ public class Doma5 {
     }
 
     //3 задача
-    public static void metod3(int x) {
-        int[] array = new int[x];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i;
+    public static void metod3(int x, int[] arrays) {
+        for (int i = 0; i < arrays.length; i++) {
+            arrays[i] = x;
         }
-        System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(arrays));
     }
 
     //4 задача
-    public static void metod4(int y) {
-        int[] array = new int[y];
+    public static void metod4(int y, int[] array) {
         for (int i = 0; i < array.length; i++) {
-            array[i] = i + y;
+            array[i] = array[i] + y;
         }
         System.out.println(Arrays.toString(array));
     }
