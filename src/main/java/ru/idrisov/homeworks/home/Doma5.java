@@ -1,9 +1,8 @@
-package ru.idrisov.homeworks.homeworks55;
+package ru.idrisov.homeworks.home;
 
 import java.util.Arrays;
 
-public class Doma55 {
-
+public class Doma5 {
     public static void main(String[] args) {
 
         int[] arr = {3, 7, 9, 10, 20, 30};
@@ -73,3 +72,7 @@ public class Doma55 {
 
     }
 }
+
+
+
+
