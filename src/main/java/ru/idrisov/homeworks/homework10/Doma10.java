@@ -21,7 +21,11 @@ public class Doma10 {
 
 
         Box box = new Box(50,"black", true, "Мяч" );
+        box.BoxClose();
+        box.items();
         box.infoBox();
+
+
 
     }
 }
