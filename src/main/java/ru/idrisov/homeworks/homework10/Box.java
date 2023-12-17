@@ -15,34 +15,34 @@ public class Box {
     }
 
     public void BoxClose(){
-        if (isClosed == false){
+        if (isClosed == true){
             System.out.println("Коробка закрыта");
             System.out.println("=========");
             return;
         }
         System.out.println("Коробка открыта");
         System.out.println("=========");
-        return;
     }
 
 
     public void items(){
-        if (isClosed == false){
-            System.out.println("Коробка закрыта");
+        if (isClosed == true){
+            System.out.println("Коробка закрыта, не получится положить предмет");
             System.out.println("=========");
             return;
         }
-        if (items != "") {
-            System.out.println("В коробке что-то лежит");
-            System.out.println("=========");
+
+        if (!items.equals("")) {
+            System.out.println("В коробке лежало " + items + ", но уже выкинули");
             this.items = "";
-            System.out.println("Предмет с коробки удален");
-            System.out.println("=========");
+            return;
         }
-        System.out.println("Коробка пустая");
-        System.out.println("=========");
-        return;
-        }
+
+       String item = "Шарик";
+        this.items = item;
+        System.out.println("Коробка была пустой, поэтому мы положили в нее " + item);
+    }
+
 
 
 
@@ -53,7 +53,7 @@ public class Box {
         if (isClosed) {   System.out.println("Статус коробки:  открыт");
         } else {  System.out.println("Статус коробки:  закрыт"); }
 
-        if (items != "") {   System.out.println("Наличие предмета в коробке: " + items);
+        if (!items.equals("")) {   System.out.println("Наличие предмета в коробке: " + items);
         } else {  System.out.println("Наличие предмета в коробке: пусто"); }
     }
 

@@ -20,7 +20,7 @@ public class Doma10 {
         }
 
 
-        Box box = new Box(50,"black", true, "Мяч" );
+        Box box = new Box(50,"black", false, "" );
         box.BoxClose();
         box.items();
         box.infoBox();
