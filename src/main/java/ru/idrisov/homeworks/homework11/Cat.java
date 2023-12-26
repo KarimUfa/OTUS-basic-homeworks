@@ -7,6 +7,11 @@ public class Cat extends Animal{
         super(name,speedRun,speedsSwim,endurance);
     }
 
+    @Override
+    public void swim(int distance){
+            System.out.println(name + " не умеет плавать.");
+            return;
+    }
 
 
 }

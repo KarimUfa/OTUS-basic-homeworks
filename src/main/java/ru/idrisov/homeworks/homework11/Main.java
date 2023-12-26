@@ -9,6 +9,7 @@ public class Main {
 //
         cat.info();
         cat.run(10);
+        cat.swim(0);
         dog.info();
         dog.run(10);
         dog.swim(12);

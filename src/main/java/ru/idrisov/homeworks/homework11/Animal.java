@@ -30,11 +30,6 @@ public class Animal {
     }
 
     public void swim(int distance){
-        if(name.equals("Sharik")){
-            this.endurance =  endurance - distance * 2;
-        } else if (name.equals("Horse")){
-            this.endurance =  endurance - distance * 4;
-        }
 
         float time =  (float) distance/speedsSwim;
 
