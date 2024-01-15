@@ -1,8 +1,8 @@
 package ru.idrisov.homeworks.homework12;
 
 public class Cats {
-   private String name;
-    private int appetite;
+   private final String name;
+    private final int appetite;
     private boolean satiety;
 
     public String getName() {

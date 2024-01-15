@@ -6,7 +6,7 @@ public class Main {
         Cat cat = new Cat("Barsik", 7, 0, 30);
         Dog dog = new Dog("Sharik", 9, 6, 40);
         Horse horse = new Horse("Horse", 15, 5, 50);
-//
+
         cat.info();
         cat.run(10);
         cat.swim(0);

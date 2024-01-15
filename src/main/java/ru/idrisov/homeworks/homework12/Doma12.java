@@ -10,15 +10,15 @@ public class Doma12 {
         tarelka.DecreaseFood(70);
         tarelka.info();
 
-        Cats[] cats = {new Cats("Barsik", 10),
+        Cats[] cat = {new Cats("Barsik", 10),
                 new Cats("Tomas", 15),
                 new Cats("Fedor", 35)};
-        for (int i = 0; i < cats.length; i++) {
-            if (cats[i].isSatiety() == true && cats[i].getAppetite() <= tarelka.getCurrentEat()) {
-                cats[i].eating(tarelka);
-                System.out.println("Котик по имени " + cats[i].getName() + " покушал " + tarelka.getCurrentEat());
+        for (int i = 0; i < cat.length; i++) {
+            if (cat[i].isSatiety() == true && cat[i].getAppetite() <= tarelka.getCurrentEat()) {
+                cat[i].eating(tarelka);
+                System.out.println("Котик по имени " + cat[i].getName() + " покушал " + tarelka.getCurrentEat());
             } else {
-                System.out.println("Кот" + cats[i].getName() + " оказался без пайка!");
+                System.out.println("Кот" + cat[i].getName() + " оказался без пайка!");
             }
         }
 

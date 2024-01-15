@@ -37,7 +37,10 @@ public class Tarelka {
     }
 
     public boolean DecreaseFood(int eats) {
-
+        if (eats < 1) {
+            System.out.println("Значение eats не может быть отрицательным числом");
+            return false;
+        }
         int finalEat = food - eats;
         if (finalEat >= 0 && eats > 0) {
             food = finalEat;
