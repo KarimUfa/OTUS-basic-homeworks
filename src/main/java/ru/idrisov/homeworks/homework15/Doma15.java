@@ -1,9 +1,8 @@
 package ru.idrisov.homeworks.homework15;
 
-import java.net.InterfaceAddress;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Arrays;
-import java.util.Iterator;
 
 public class Doma15 {
 
@@ -30,22 +29,20 @@ public class Doma15 {
 
 
     //Задача 1
-    public static ArrayList<Integer> zadacha1(int min, int max) {
-        ArrayList<Integer> ArrayList = new ArrayList<>();
+    public static List<Integer> zadacha1(int min, int max) {
+        List<Integer> arrayList = new ArrayList<>();
         for (int a = min; a <= max; a++) {
-            ArrayList.add(a);
+            arrayList.add(a);
         }
-        return ArrayList;
+        return arrayList;
     }
 
     // Задание 2. Реализуйте метод, принимающий в качестве аргумента список целых чисел, суммирующий все элементы, значение которых больше 5, и возвращающий сумму;
     public static int zadacha2(ArrayList<Integer> arrList) {
-        Iterator vars = arrList.iterator();
         int summa = 0;
-        while (vars.hasNext()) {
-            Integer s = (Integer) vars.next();
-            if (s > 5) {
-                summa += s;
+        for (int a = 0; a < arrList.size(); a++) {
+            if (arrList.get(a) > 5) {
+                summa += arrList.get(a);
             }
         }
         return summa;
@@ -53,19 +50,19 @@ public class Doma15 {
 
 
     // Задание 3. Реализуйте метод, принимающий в качестве аргументов целое число и ссылку на список, метод должен переписать каждую заполненную ячейку списка указанным числом;
-    public static void zadacha3(int Sum, ArrayList<Integer> arrList) {
+    public static void zadacha3(int sum, ArrayList<Integer> arrList) {
 
         for (int a = 0; a < arrList.size(); a++) {
-            arrList.set(a, Sum);
+            arrList.set(a, sum);
         }
         System.out.println(arrList);
     }
 
     // Задание 4. Реализуйте метод, принимающий в качестве аргументов целое число и ссылку на список, увеличивающий каждый элемент списка на указанное число;
-    public static void zadacha4(int Sum, ArrayList<Integer> arrList) {
+    public static void zadacha4(int sum, ArrayList<Integer> arrList) {
 
         for (int a = 0; a < arrList.size(); a++) {
-            arrList.set(a, arrList.get(a) + Sum);
+            arrList.set(a, arrList.get(a) + sum);
         }
         System.out.println(arrList);
     }
@@ -81,13 +78,13 @@ public class Doma15 {
     }
 
     //Задача 7
-    public static ArrayList<String> zadacha7(ArrayList<Employee> employee, int Ages) {
+    public static ArrayList<String> zadacha7(ArrayList<Employee> employee, int ages) {
 
         ArrayList<String> names = new ArrayList<>();
         names.add("С минимальным возрастом: " + employee.get(0).getName());
 
         for (int a = 0; a < employee.size(); a++) {
-            if (employee.get(a).getAge() >= Ages) {
+            if (employee.get(a).getAge() >= ages) {
                 names.add(employee.get(a).getName());
             }
         }
@@ -95,11 +92,11 @@ public class Doma15 {
     }
 
     //Задача 8
-    public static ArrayList<String> zadacha8(ArrayList<Employee> employee, int Ages) {
+    public static ArrayList<String> zadacha8(ArrayList<Employee> employee, int ages) {
 
         ArrayList<String> names = new ArrayList<>();
         for (int a = 0; a < employee.size(); a++) {
-            if (employee.get(a).getAge() / 2 >= Ages) {
+            if (employee.get(a).getAge() / 2 >= ages) {
                 names.add("С минимальным средним возрастом: " + employee.get(a).getName());
             }
         }
@@ -109,10 +106,10 @@ public class Doma15 {
     //Задача 9
     public static ArrayList<String> zadacha9(ArrayList<Employee> employee) {
 
-        int Ages = employee.get(0).getAge();
+        int ages = employee.get(0).getAge();
         ArrayList<String> names = new ArrayList<>();
         for (int a = 0; a < employee.size(); a++) {
-            if (employee.get(a).getAge() < Ages) {
+            if (employee.get(a).getAge() < ages) {
                 names.add("Самый молодой сотрудник: " + employee.get(a).getName());
             }
         }
