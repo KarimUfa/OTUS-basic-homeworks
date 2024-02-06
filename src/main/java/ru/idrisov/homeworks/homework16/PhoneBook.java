@@ -3,14 +3,11 @@ package ru.idrisov.homeworks.homework16;
 
 import java.util.HashMap;
 import java.util.Map;
-
-
 public class PhoneBook {
 
     public void add(String fio, String phone) {
         System.out.println("ФИО: " + fio + " Телефон: " + phone);
     }
-
     public Map<String, String> find(String fio) {
         Map<String, String> book = new HashMap<>();
         book.put("2222222", "fio");
