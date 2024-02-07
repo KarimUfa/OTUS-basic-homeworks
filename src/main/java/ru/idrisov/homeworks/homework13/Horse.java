@@ -2,27 +2,27 @@ package ru.idrisov.homeworks.homework13;
 
 public class Horse implements Participant {
 
-    private int Distance;
-    private int MaxDistance;
-    private int Sila;
+    private int distance;
+    private int maxDistance;
+    private int sila;
 
 
-    public Horse(int Distance) {
-        this.Distance = Distance;
-        this.MaxDistance = 15000;
-        this.Sila = this.Distance / 10;
+    public Horse(int distance) {
+        this.distance = distance;
+        this.maxDistance = 15000;
+        this.sila = this.distance / 10;
 
     }
 
     @Override
     public boolean run(String name, String currentTransport) {
 
-        if (MaxDistance < Distance) {
-            System.out.println("Указано слишком больше растояние. Лошадь может пробежать максимум " + MaxDistance + " метров");
+        if (maxDistance < distance) {
+            System.out.println("Указано слишком больше растояние. Лошадь может пробежать максимум " + maxDistance + " метров");
             return false;
         }
-        Terrain currentLocation = Terrain.RAVNINA;
-        System.out.println(name + " на лошаде пробежал дистанцию " + this.Distance + " метров по " + currentLocation.getIndex() + " потратив " + Sila + " силы");
+        Terrain currentLocation = Terrain.PLAIN;
+        System.out.println(name + " на лошаде пробежал дистанцию " + this.distance + " метров по " + currentLocation.getIndex() + " потратив " + sila + " силы");
 
         return true;
     }

@@ -1,9 +1,9 @@
 package ru.idrisov.homeworks.homework13;
 
 public enum Terrain {
-    LES("Лесу"),
-    RAVNINA("Равнине"),
-    BOLOTO("Болоте");
+    FOREST("Лесу"),
+    PLAIN("Равнине"),
+    SWAMP("Болоте");
 
     private String index;
 
