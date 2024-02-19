@@ -13,8 +13,8 @@ public class Doma19 {
 
         File file = new File("C:\\Users\\User\\Desktop\\OTUS-basic-homeworks\\src\\test\\java\\");
 
-        if (file.exists()) {
-
+        if (file.exists()) {// проверяем наличие файла
+            
             File[] arr = file.listFiles();
             for (int i = 0; i < arr.length; i++) {
                 System.out.println(arr[i].getName());
